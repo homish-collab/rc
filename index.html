@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <style>
+        /* CSS stays here or in your style.css */
+        :root {
+            --primary: #004a99;
+            --accent: #ffc107;
+        }
+
+        .body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+
+        /* Navbar Fixes */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-img {
+            height: 45px;
+            border-radius: 5px;
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80');
+            height: 70vh;
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero-heading {
+            font-size: 3.5rem;
+            font-weight: 800;
+            min-height: 1.2em;
+        }
+
+        .cursor {
+            color: var(--accent);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Professional Cards */
+        .testimonial-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        /* Resource Card Styling */
+        .resource-card {
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .card {
+            height: 20vh;
+            width: 300vw;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
+            border-color: #007bff;
+        }
+
+        .icon-box {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
+        /* CTA Banner with professional gradient */
+        .cta-banner {
+            background: linear-gradient(135deg, #004a99 0%, #002d5c 100%);
+            box-shadow: 0 10px 20px rgba(0, 74, 153, 0.2);
+        }
+
+        .U {
+            font-size: 10px;
+            margin-left: 20px;
+        }
+
+        .btn-warning {
+            background-color: #ffc107;
+            border: none;
+            color: #000;
+        }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+            transform: scale(1.05);
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .testimonial-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .testimonial-text {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-number {
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="https://lh7-rt.googleusercontent.com/formsz/AN7BsVA5xLbcJ4kv6lg8XtuWYiAhDSyA6DdHmT4Td6WYto0YsdHZHizEjcWBK5LXots4dTBKqcxKyf2MjHTtbfIzpfnNNruuJ4H9w2b0ejQOhKmRgOjvCUz18VI38FXxBeY39uv6dVXuHnAZ62h5348eyxkBEfdf_vRd887OWQ?key=87rugDjz-igKbOTCDq_aAA" class="logo-img mr-2">
+                <span class="font-weight-bold">RISHAB COUNSELLING</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link" href="#why-choose-us">Why Choose Us</a>
+                    <a class="nav-link" href="#refund">Refund Policy and Goverment Act</a>
+                    <a class="nav-link" href="#resources">Resources</a>
+
+                    <a class="nav-link btn btn-warning text-dark font-weight-bold ml-lg-3 px-3" href="https://forms.gle/rd2U5pMWfZa62zTMA">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section d-flex flex-column justify-content-center text-center">
+        <div class="container">
+            <h1 class="hero-heading" id="typewriter"></h1>
+            <p class="lead">Your Trusted Guide to JEE & College Admissions Success</p>
+        </div>
+    </header>
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 stat-box">
+                    <div class="stat-number">500+</div>
+                    <p class="text-muted">Students Helped</p>
+                </div>
+                <div class="col-md-4 stat-box">
+                    <div class="stat-number">IIT/NIT</div>
+                    <p class="text-muted">Top Placements</p>
+                </div>
+                <div class="col-md-4 stat-box">
+                    <div class="stat-number">24/7</div>
+                    <p class="text-muted">Expert Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="why-choose-us" class="container py-5">
+        <h2 class="text-center mb-5 font-weight-bold">What We Offer</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                    <li class="mb-3">✅ Expert Choice Filling Guidance</li>
+                    <li class="mb-3">✅ Real-time Cutoff Updates</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                    <li class="mb-3">✅ Category Benefit Optimization</li>
+                    <li class="mb-3">✅ JOSAA & CSAB Support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="refund" class="container py-5">
+        <h2 class="text-center mb-5 font-weight-bold">Refund Policy</h2>
+        <p>You can get a refund of 80% if you cancel in your first week of counselling by texting "CANCEL COUNSELLING"
+            And likewise 50% in the 2nd week but that would be it following no refund by the 3rd week
+            And across all over India,only our counselling provides refund so choose wisely.</p>
+        <div class="col-md-6">
+            <h2 class="font-weight-bold">Government Act</h2>
+            <p>Verified and compliant with:</p>
+            <div class="row small font-weight-bold">
+                <div class="col-6">
+                    <ul class="list-unstyled">
+                        <li>• IT, 2000</li>
+                        <li>• DPDP Act, 2023</li>
+                        <li>• CP Act, 2019</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul class="list-unstyled">
+                        <li>• CA Act, 1957</li>
+                        <li>• TM Act, 1999</li>
+                        <li>• IPC, 1860</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="resources" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="font-weight-bold">Admissions Toolkit</h2>
+                <p class="text-muted">Essential tools to help you analyze your JEE performance.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="resource-card shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <div class="icon-box mb-3">📊</div>
+                            <h5 class="font-weight-bold">Marks vs Percentile</h5>
+                            <p class="small text-muted">Understand how your raw score translates into a percentile based on shift difficulty.</p>
+                            <a href="https://www.jeepredictor.in/percentile-predictor" target="_blank" class="btn btn-outline-primary btn-sm btn-block">Analyze Score</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="resource-card shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <div class="icon-box mb-3">🏆</div>
+                            <h5 class="font-weight-bold">Percentile vs Rank</h5>
+                            <p class="small text-muted">Predict your All India Rank (AIR) and Category Rank to see where you stand.</p>
+                            <a href="https://engineering.careers360.com/articles/jee-main-rank-vs-percentile">Check Rank</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="resource-card shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <div class="icon-box mb-3">🏛️</div>
+                            <h5 class="font-weight-bold">Official Cutoffs</h5>
+                            <p class="small text-muted">Access the official JoSAA Opening and Closing ranks for IITs, NITs, and IIITs.</p>
+                            <a href="https://josaa.nic.in/document/opening-and-closing-ranks-2024/" target="_blank" class="btn btn-outline-primary btn-sm btn-block">View Cutoffs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-banner mt-5 p-5 text-center text-white rounded">
+                <h3 class="font-weight-bold">Ready to secure your future?</h3>
+                <p class="lead mb-4">Don't leave your seat to chance. Let our experts find the best college for your rank.</p>
+                <a href="https://forms.gle/rd2U5pMWfZa62zTMA" class="btn btn-warning btn-lg px-5 shadow-lg font-weight-bold">Fill Registration Form</a>
+                <p class="mt-3 mb-0 small opacity-75">*Our team will contact you within 24 hours.</p>
+            </div>
+        </div>
+    </section>
+    <section id="pricing" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="font-weight-bold">Counselling Packages</h2>
+                <p class="text-muted">Choose the plan that fits your admission goals.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-5 mb-4">
+                    <div class="resource-card shadow-sm h-100 border-primary" style="border-width: 2px;">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h4 class="font-weight-bold text-primary">All-in-One Package</h4>
+                            <p class="text-muted small">Excluding JoSAA</p>
+                            <hr>
+                            <div class="my-3">
+                                <span class="display-4 font-weight-bold">₹7,500</span>
+                            </div>
+                            <ul class="list-unstyled text-left mb-4">
+                                <li>✅ AKTU / UPTAC Counselling</li>
+                                <li>✅ All Private College Counselling</li>
+                                <li>✅ State Level University Support</li>
+                                <li>✅ Choice Filling & Rank Analysis</li>
+                            </ul>
+                            <a href="https://forms.gle/rd2U5pMWfZa62zTMA" class="btn btn-primary mt-auto">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5 mb-4">
+                    <div class="resource-card shadow-sm h-100 border-warning" style="border-width: 2px;">
+                        <div class="card-body text-center d-flex flex-column">
+                            <div class="badge badge-warning mb-2 w-50 mx-auto">Premium</div>
+                            <h4 class="font-weight-bold">JoSAA Specialist</h4>
+                            <p class="text-muted small">IIT / NIT / IIIT Focus</p>
+                            <hr>
+                            <div class="my-3">
+                                <span class="display-4 font-weight-bold">₹15,000</span>
+                            </div>
+                            <ul class="list-unstyled text-left mb-4">
+                                <li>✅ Everything in "All-in-One"</li>
+                                <li>✅ <strong>Complete JoSAA & CSAB Support</strong></li>
+                                <li>✅ High-Stakes Choice Preference Lists</li>
+                                <li>✅ Direct Expert Consultation</li>
+                            </ul>
+                            <a href="https://forms.gle/rd2U5pMWfZa62zTMA" class="btn btn-warning mt-auto font-weight-bold">Get Premium Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-secondary py-5 text-white">
+        <div class="container">
+            <h2 class="text-center mb-5">Success Stories</h2>
+            <div class="row text-dark">
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <img class="testimonial-img" src="https://user4268.na.imgto.link/public/20260312/196739b5-375f-4744-b939-1d544114dfab.avif">
+                        <p class="testimonial-text">"Secured AIR 12682, now in <strong>IIT PATNA</strong>. Best guidance!" - Homish Tripathi</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <img class="testimonial-img" src="https://user4268.na.imgto.link/public/20260312/05fad6aa-e39f-45a8-940d-837114c3b872.avif">
+                        <p class="testimonial-text">I am Girish gupta and I am in IIT ROORKEE and my counsellor was rishab sir thank you sir.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <img class="testimonial-img" src="https://image2url.com/r2/default/images/1773301048289-140a63e9-21de-4fb2-85e7-5cafebdce509.jpg">
+                        <p class="testimonial-text">I am Roop narayan jha and I am in IIT guwahati and my counsellor was rishab sir thank you sir.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <img class="testimonial-img" src="https://image2url.com/r2/default/images/1773300819373-701aa867-bdc8-4021-8d4f-3e12ea6deb5e.jpg">
+                        <p class="testimonial-text">I am Aayush Raj and I am in BITS PILANI and rishab sir helps me alot. I owe you sir.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <img class="testimonial-img" src="https://image2url.com/r2/default/images/1773300997376-e43255ee-5416-41bd-9c93-b183078df29a.jpg">
+                        <p class="testimonial-text">I am Ayush rajak and I am in IIIT BHOPAL and rishab sir helps me alot, thank you sir.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <img class="testimonial-img" src="https://image2url.com/r2/default/images/1773300947385-64e6de89-63e8-4f21-8ad7-dc15f158988e.jpg">
+                        <p class="testimonial-text">I am Aditya sahi and I am in IIIT RANCHI and I want to thank you rishab sir and his team,, thank you sir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">© 2026 Rishab Counselling. Operating under IT Act 2000 & DPDP Act 2023.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Professional Typing Effect
+        const text = "Welcome to RISHAB COUNSELLING";
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                document.getElementById("typewriter").innerHTML = text.slice(0, index + 1) + '<span class="cursor">|</span>';
+                index++;
+                setTimeout(type, 100);
+            }
+        }
+        window.onload = type;
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
